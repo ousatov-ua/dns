@@ -10,9 +10,12 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 * Put content of `etc/sysctl.conf` into your `sysctl.conf`
 
 #
-* Turn off IPv6:
+#### > IPv6:
+
+Turn off IPv6
 
 Edit `etc/default/grub`, add `ipv6.disable=1` to the variable `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too)
+
 Run:
   
   ```sh
@@ -22,7 +25,9 @@ Run:
 Reboot
 
 #
-* If you want HT disabled but you cannot disable it in BIOS, add `nosmt` to `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too), e.g.:
+#### > Hyper-threading
+
+If you want HT disabled but you cannot disable it in BIOS, add `nosmt` to `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too), e.g.:
   
   ```sh
   GRUB_CMDLINE_LINUX="nosmt"
@@ -33,7 +38,9 @@ Reboot
   sudo update-grub
   ```
 #
-#### > !!!Optionally!!! : use `tuned` package for network latency optimizations:
+#### > !!!Optionally!!! Tuned package
+
+Use `tuned` package for network latency optimizations:
   
   ```sh
   sudo apt install tuned
@@ -42,29 +49,33 @@ Reboot
   ```
 #
 #### > Configure UFW:
-* Review current configuration of UFW:
+
+Review current configuration of UFW:
   
   ```sh
   sudo ufw status
   ```
-* To delete some particular rule run:
+
+To delete some particular rule run:
   
   ```sh
   sudo ufw status numbered
   sudo ufw delete <number>
   ```
-* Verify that UFW has these configuration:
+Verify that UFW has these configuration:
   
   ```sh
   sudo ufw allow 443
   sudo ufw limit 22/tcp
   ```
-* If you want port `53` accessible to all:
+
+If you want port `53` accessible to all:
   
   ```sh
   sudo ufw allow 53/udp
   ```
-* If to some specific IP address only:
+
+If to some specific IP address only:
   
   ```sh
   sudo ufw allow from <ip> proto tcp to any port 53/udp
