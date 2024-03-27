@@ -136,8 +136,9 @@ sudo mkdir /var/log/unbound
 sudo chown unbound:unbound /var/log/unbound
 ```
 
-Replace default configuration of Unbound with files from /etc/unbound.
-Setup unbound-control:
+* Replace default configuration of Unbound with files from `/etc/unbound`.
+
+* Setup unbound-control:
 
 ```shell
 sudo unbound-control-setup
