@@ -150,7 +150,20 @@ sudo apt install dns-root-data
 sudo ln -s /usr/share/dns/root.key /var/lib/unbound/root.key
 sudo ln -s /usr/share/dns/root.hints /var/lib/unbound/root.hints
 ```
+* For DNS filtering put `update-conf.sh` into corresponding path
 
+```shell
+sudo chmod +x /opt/unbound/update-conf.sh
+sudo mkdir /etc/unbound/rules
+sudo sh /opt/unbound/update-conf.sh
+```
+
+* Put `unbound-update-config.service` and `unbound-update-config.timer` in corresponding path.
+
+```shell
+sudo systemctl daemon-reload
+sudo systemctl enable --now unbound-update-config.timer`
+```
 * Create service
 
 Put `/etc/systemd/system/unbound.service` from repo.
