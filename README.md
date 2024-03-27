@@ -221,6 +221,8 @@ Put it to config
 sudo systemtl enable --now dnsdist.service
 ```
 
-## Monitoring
+## Monitoring (kudos to @ar51an)
 
-Please use https://github.com/ar51an/unbound-dashboard or forked one https://github.com/ousatov-ua/unbound-exporter
+Please use https://github.com/ar51an/unbound-dashboard or forked one https://github.com/ousatov-ua/unbound-dashboard
+
+and https://github.com/ar51an/unbound-exporter or forked one https://github.com/ousatov-ua/unbound-exporter
