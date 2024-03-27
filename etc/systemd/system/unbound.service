@@ -1,0 +1,19 @@
+[Unit]
+Description=Unbound DNS server
+Documentation=man:unbound(8)
+After=network.target
+Before=nss-lookup.target
+Wants=nss-lookup.target
+
+[Service]
+Type=notify
+Restart=on-failure
+EnvironmentFile=-/etc/default/unbound
+#ExecStartPre=-/usr/libexec/unbound-helper chroot_setup
+#ExecStartPre=-/usr/libexec/unbound-helper root_trust_anchor_update
+ExecStart=/usr/sbin/unbound -d -p $DAEMON_OPTS
+#ExecStopPost=-/usr/libexec/unbound-helper chroot_teardown
+ExecReload=+/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
