@@ -12,7 +12,7 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 #
 #### > Turn off IPv6
 
-* Edit `etc/default/grub`, add `ipv6.disable=1` to the variable `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too), e.g.:
+* Edit `etc/default/grub`, make sure that `ipv6.disable=1` is present, e.g.:
 
   ```sh
   GRUB_CMDLINE_LINUX="ipv6.disable=1"
@@ -29,7 +29,7 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 #
 #### > Hyper-threading
 
-* If you want HT disabled but you cannot disable it in BIOS, add `nosmt` to `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too), e.g.:
+* If you want HT disabled but you cannot disable it in BIOS, make sure that `nosmt` is present, e.g.:
   
   ```sh
   GRUB_CMDLINE_LINUX="nosmt"
