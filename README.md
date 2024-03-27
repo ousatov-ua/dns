@@ -28,7 +28,7 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
   
   ```sh
   sudo apt install tuned
-  sudo tuned-adm network-latency
+  sudo tuned-adm profile network-latency
   sudo reboot
   ```
 * Configure UFW:
