@@ -12,17 +12,17 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 #
 #### > IPv6:
 
-* Turn off IPv6
+* Turn off IPv6:
 
-* Edit `etc/default/grub`, add `ipv6.disable=1` to the variable `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too)
+** Edit `etc/default/grub`, add `ipv6.disable=1` to the variable `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too)
 
-Run:
+** Run:
   
   ```sh
   sudo update-grub
   ```
 
-* Reboot
+** Reboot
 
 #
 #### > Hyper-threading
