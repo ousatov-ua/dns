@@ -11,13 +11,13 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 
 #
 * Turn off IPv6:
-* Edit `etc/default/grub`, add `ipv6.disable=1` to the variable `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too)
-* Run:
+Edit `etc/default/grub`, add `ipv6.disable=1` to the variable `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too)
+Run:
   
   ```sh
   sudo update-grub
   ```
-* Reboot
+Reboot
 
 #
 * If you want HT disabled but you cannot disable it in BIOS, add `nosmt` to `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too), e.g.:
