@@ -1,6 +1,6 @@
 # Configuration of filtering caching DNS resolver
 
-Current HOWTO is for Debian based distributives, tests on Debian 12.
+Current HOWTO is for Debian based distributives, tested on Debian 12.
 
 ## General configuration
 
