@@ -1,0 +1,6 @@
+[Unit]
+Description=Unbound config update service
+After=network.target
+
+[Service]
+ExecStart=/opt/unbound/update-conf.sh
