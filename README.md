@@ -147,7 +147,7 @@ sudo unbound-control-setup
 
 ```shell
 sudo apt install dns-root-data
-sudo ln -s /usr/share/dns/root.key /var/lib/unbound/root.ket
+sudo ln -s /usr/share/dns/root.key /var/lib/unbound/root.key
 sudo ln -s /usr/share/dns/root.hints /var/lib/unbound/root.hints
 ```
 
