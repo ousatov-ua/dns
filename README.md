@@ -17,6 +17,7 @@ Run:
   ```sh
   sudo update-grub
   ```
+
 Reboot
 
 #
