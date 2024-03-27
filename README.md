@@ -5,9 +5,9 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 
 ## General configuration
 
-####  Put content of `/etc/security/limits.conf` into your `limits.conf`
+* Put content of `/etc/security/limits.conf` into your `limits.conf`
 
-####  Put content of `etc/sysctl.conf` into your `sysctl.conf`
+* Put content of `etc/sysctl.conf` into your `sysctl.conf`
 
 #
 #### > Turn off IPv6:
@@ -40,29 +40,29 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
   ```
 #
 #### > Configure UFW:
-  Review current configuration of UFW:
+* Review current configuration of UFW:
   
   ```sh
   sudo ufw status
   ```
-  To delete some particular rule run:
+* To delete some particular rule run:
   
   ```sh
   sudo ufw status numbered
   sudo ufw delete <number>
   ```
-  Verify that UFW has these configuration:
+* Verify that UFW has these configuration:
   
   ```sh
   sudo ufw allow 443
   sudo ufw limit 22/tcp
   ```
-  If you want port `53` accessible to all:
+* If you want port `53` accessible to all:
   
   ```sh
   sudo ufw allow 53/udp
   ```
-  If to some specific IP address only:
+* If to some specific IP address only:
   
   ```sh
   sudo ufw allow from <ip> proto tcp to any port 53/udp
