@@ -19,6 +19,11 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
   ```sh
   GRUB_CMDLINE_LINUX="nosmt"
   ```
+  Apply it:
+  
+  ```sh
+  sudo update-grub
+  ```
 * !!!Optionally!!! : use `tuned` package for network latency optimizations:
   
   ```sh
