@@ -209,7 +209,6 @@ setKey("<key from console>")
 * Generate password for webServerConfig
 
 ```shell
-sudo dnsdist
 >hashPassword("<your password>")
 ```
 
