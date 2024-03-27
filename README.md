@@ -5,9 +5,9 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 
 ## General configuration
 
-###  Put content of `/etc/security/limits.conf` into your `limits.conf`
+####  Put content of `/etc/security/limits.conf` into your `limits.conf`
 
-###  Put content of `etc/sysctl.conf` into your `sysctl.conf`
+####  Put content of `etc/sysctl.conf` into your `sysctl.conf`
 
 #
 #### > Turn off IPv6:
@@ -20,7 +20,7 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 * Reboot
 
 #
-### > If you want HT disabled but you cannot disable it in BIOS, add `nosmt` to `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too), e.g.:
+#### > If you want HT disabled but you cannot disable it in BIOS, add `nosmt` to `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too), e.g.:
   
   ```sh
   GRUB_CMDLINE_LINUX="nosmt"
@@ -31,7 +31,7 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
   sudo update-grub
   ```
 #
-### > !!!Optionally!!! : use `tuned` package for network latency optimizations:
+#### > !!!Optionally!!! : use `tuned` package for network latency optimizations:
   
   ```sh
   sudo apt install tuned
@@ -39,7 +39,7 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
   sudo reboot
   ```
 #
-### > Configure UFW:
+#### > Configure UFW:
   Review current configuration of UFW:
   
   ```sh
