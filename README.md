@@ -1,5 +1,4 @@
-# dns
-Configuration of filtering caching DNS resolver
+# Configuration of filtering caching DNS resolver
 
 Current HOWTO is for Debian based distributives, tests on Debian 12.
 
