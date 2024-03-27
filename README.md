@@ -59,3 +59,8 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
   ```sh
   sudo ufw allow from <ip> proto tcp to any port 53/udp
   ```
+  Apply rules:
+
+  ```sh
+  sudo ufw reload
+  ```
