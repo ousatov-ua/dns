@@ -10,7 +10,7 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 * Put content of `etc/sysctl.conf` into your `sysctl.conf`
 
 #
-#### > Turn off IPv6:
+* Turn off IPv6:
 * Edit `etc/default/grub`, add `ipv6.disable=1` to the variable `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too)
 * Run:
   
@@ -20,7 +20,7 @@ Current HOWTO is for Debian based distributives, tests on Debian 12.
 * Reboot
 
 #
-#### > If you want HT disabled but you cannot disable it in BIOS, add `nosmt` to `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too), e.g.:
+* If you want HT disabled but you cannot disable it in BIOS, add `nosmt` to `GRUB_CMDLINE_LINUX` (optionally to `GRUB_CMDLINE_LINUX_DEFAULT` too), e.g.:
   
   ```sh
   GRUB_CMDLINE_LINUX="nosmt"
