@@ -224,7 +224,7 @@ sudo systemtl enable --now dnsdist.service
 ## Monitoring
 
 > [!IMPORTANT]
-> !!!Many thanks to [AA ar51an](https://github.com/ar51an) for his work!!!
+> Many thanks to [AA ar51an](https://github.com/ar51an) for his work
 
 Please use https://github.com/ar51an/unbound-dashboard or forked one https://github.com/ousatov-ua/unbound-dashboard
 
