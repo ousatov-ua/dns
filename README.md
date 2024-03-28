@@ -23,7 +23,7 @@
 <details>
 <summary><i>expand</i> 👉</summary>
 
-#### 🔸 IPv6 (optional! , just for faq)
+#### 🔸 !!!Optionally!!! IPv6 (just for FAQ)
 
 * Edit `/etc/default/grub`, make sure that `ipv6.disable=1` is present, e.g.:
 
