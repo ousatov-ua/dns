@@ -9,6 +9,7 @@
 </div>
 
 🔸 Current HOWTO is for Debian based distributives, tested on Debian 12.
+
 🔸 I'm working on a script to automate next steps.
 
 ## General configuration
