@@ -113,7 +113,7 @@
 
 * There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
-#### 🔸 Get Ubuntu
+#### 🔸 Get Unbound
 
 * Build locally
 
