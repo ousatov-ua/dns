@@ -21,7 +21,7 @@
 
 ## 🧰 General configuration
 <details>
-<summary>📜  ...</summary>
+<summary>... 👉</summary>
 
 #### 🔸 IPv6
 
@@ -109,14 +109,14 @@
 
 ## 🧰 Unbound
 <details>
-<summary>📜  ...</summary>
+<summary>... 👉</summary>
 
 * There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
 #### 🔸 Install Unbound
 
 <details>
-<summary> 📜 Steps to build locally ... </summary>
+<summary>Steps to build locally 👉 </summary>
 
 ```shell
 wget https://github.com/NLnetLabs/unbound/archive/refs/tags/release-1.19.3.zip
@@ -138,7 +138,7 @@ sudo make install
 </details>
 
 <details>
-<summary> 📜 Using apt ... </summary>
+<summary>Using apt 👉 </summary>
 
 ```shell
 sudo apt install unbound
@@ -241,7 +241,7 @@ sudo systemctl enable --now unbound.service
 
 ## 🧰 Dnsdist
 <details>
-<summary>📜  ...</summary>
+<summary>... 👉</summary>
 
 * Dnsdist is used as facade for Unbound: to give DoH/DoH3/DoT/DoQ
 
@@ -278,7 +278,7 @@ sudo systemtl enable --now dnsdist.service
 
 ## 🧰 Monitoring
 <details>
-<summary>📜  ...</summary>
+<summary>... 👉</summary>
 
 
 🔸 Follow next HOWTO
