@@ -1,4 +1,4 @@
-# ⚡Configuration of filtering caching DNS resolver
+# ⚡Configuration of filtering caching DNS resolver⚡
 
 <div align="center">
 
