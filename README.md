@@ -21,7 +21,7 @@
 <details>
 <summary>📜 expand ...</summary>
 
-#### > IPv6
+#### 🔸 IPv6
 
 * Edit `etc/default/grub`, make sure that `ipv6.disable=1` is present, e.g.:
 
@@ -35,16 +35,16 @@
   ```
 * Reboot
 
-#### > Limits and Sysctl
+#### 🔸 Limits and Sysctl
 
-🔸Next steps are for optimizing/securing current environment. 
+Next steps are for optimizing/securing current environment. 
 
 * Put content of `/etc/security/limits.conf` into your `limits.conf`
 
 * Put content of `etc/sysctl.conf` into your `sysctl.conf`
 
 
-#### > Hyper-threading
+#### 🔸 Hyper-threading
 
 * If you want HT disabled but you cannot disable it in BIOS, make sure that `nosmt` is present, e.g.:
   
@@ -57,7 +57,7 @@
   sudo update-grub
   ```
 
-#### > !!!Optionally!!! Tuned package
+#### 🔸 !!!Optionally!!! Tuned package
 
 * Use `tuned` package for network latency optimizations:
   
@@ -66,7 +66,7 @@
   sudo tuned-adm profile network-latency
   sudo reboot
   ```
-#### > UFW
+#### 🔸 UFW
 
 * Review current configuration of UFW:
   
