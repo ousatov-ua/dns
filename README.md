@@ -111,8 +111,7 @@ Next steps are for optimizing/securing current environment.
 
 There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
-<details>
-<summary>📜 Build locally</summary>
+#### 🔸 Build locally
 
 ```shell
 
@@ -125,46 +124,45 @@ sudo ./configure --prefix=/usr --includedir=\${prefix}/include --infodir=\${pref
 sudo make
 sudo make install
 ```
-</details>
 
-<details>
-<summary>📜 Using apt</summary>
+
+#### 🔸 Using apt
 
 ```shell
 sudo apt install unbound
 ```
-</details>
 
-🔸 Unbound and chroot 
+#### 🔸 Unbound and chroot 
 
-Unbound usually is running under chroot.
+* Unbound usually is running under chroot.
 
-🔸 Next steps usually are needed if Unbound is running under chroot, otherwise it will fail to create `*.sock` and `*.log` files.
+##### 🔸 Next steps usually are needed if Unbound is running under chroot, otherwise it will fail to create `*.sock` and `*.log` files.
 
 ```shell
 sudo vim /etc/apparmor.d/local/usr.sbin.unbound
 ```
 
-Put next to this file
+* Put next to this file
 
 ```shell
 /var/log/unbound/unbound.log rw,
 /var/unbound/run/unbound.sock rw,
 ```
 
-Apply it
+* Apply it
 ```shell
 sudo apparmor_parser -r /etc/apparmor.d/usr.sbin.unbound
 ```
 
-* Create logging staff
+#### 🔸 Create logging staff
 
 ```shell
 sudo mkdir /var/log/unbound
 sudo chown unbound:unbound /var/log/unbound
 ```
 
-* Replace default configuration of Unbound with files from `/etc/unbound`.
+#### 🔸 Unbound config
+Replace default configuration of Unbound with files from `/etc/unbound`.
 
 * Setup unbound-control:
 
@@ -172,7 +170,8 @@ sudo chown unbound:unbound /var/log/unbound
 sudo unbound-control-setup
 ```
 
-* Setup root.hints and root.key
+#### 🔸 Root hints and key
+* Setup `root.hints` and `root.key`
 
 ```shell
 sudo apt install dns-root-data
@@ -187,6 +186,8 @@ sudo mkdir /etc/unbound/rules
 sudo sh /opt/unbound/update-conf.sh
 ```
 
+
+#### 🔸 Unbound service
 * Put `unbound-update-config.service` and `unbound-update-config.timer` in corresponding path.
 
 ```shell
@@ -197,19 +198,23 @@ sudo systemctl enable --now unbound-update-config.timer`
 
 Put `/etc/systemd/system/unbound.service` from repo.
 
+#### 🔸 Redis
+
 * Install Redis
 
 ```shell
 sudo apt install redis-server
 ```
 
-Put `/etc/redis/redis.conf` from repo
+* Put `/etc/redis/redis.conf` from repo
 
 ```shell
 sudo systemctl enable --now redis-server
 ```
 
-Now you should be able to run Unbound
+#### 🔸 Running
+
+* Now you should be able to run Unbound
 
 ```shell
 sudo systemctl daemon-reload
