@@ -23,7 +23,7 @@
 
 #### 🔸 IPv6
 
-* Edit `etc/default/grub`, make sure that `ipv6.disable=1` is present, e.g.:
+* Edit `/etc/default/grub`, make sure that `ipv6.disable=1` is present, e.g.:
 
   ```sh
   GRUB_CMDLINE_LINUX="ipv6.disable=1"
