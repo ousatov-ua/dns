@@ -9,10 +9,8 @@ Wants=nss-lookup.target
 Type=notify
 Restart=on-failure
 EnvironmentFile=-/etc/default/unbound
-#ExecStartPre=-/usr/libexec/unbound-helper chroot_setup
-#ExecStartPre=-/usr/libexec/unbound-helper root_trust_anchor_update
+ExecStartPre=/usr/sbin/unbound-checkconf
 ExecStart=/usr/sbin/unbound -d -p $DAEMON_OPTS
-#ExecStopPost=-/usr/libexec/unbound-helper chroot_teardown
 ExecReload=+/bin/kill -HUP $MAINPID
 
 [Install]
