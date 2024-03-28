@@ -111,9 +111,8 @@
 
 There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
-#### > Build locally
 <details>
-<summary>📜 expand ...</summary>
+<summary>📜 Build locally</summary>
 
 ```shell
 
@@ -128,9 +127,8 @@ sudo make install
 ```
 </details>
 
-#### > Using apt
 <details>
-<summary>📜 expand ...</summary>
+<summary>📜 Using apt</summary>
 
 ```shell
 sudo apt install unbound
