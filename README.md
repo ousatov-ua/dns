@@ -178,6 +178,9 @@ sudo apt install dns-root-data
 sudo ln -s /usr/share/dns/root.key /var/lib/unbound/root.key
 sudo ln -s /usr/share/dns/root.hints /var/lib/unbound/root.hints
 ```
+
+#### 🔸 Unbound filters
+
 * For DNS filtering put `update-conf.sh` into corresponding path
 
 ```shell
@@ -186,6 +189,7 @@ sudo mkdir /etc/unbound/rules
 sudo sh /opt/unbound/update-conf.sh
 ```
 
+* You can check which filters are used in `/etc/unbound/unbound.conf.d/server.conf` and `/opt/unbound/update-conf.sh`
 
 #### 🔸 Unbound service
 * Put `unbound-update-config.service` and `unbound-update-config.timer` in corresponding path.
@@ -226,7 +230,7 @@ sudo systemctl enable --now unbound.service
 <details>
 <summary>📜 expand ...</summary>
 
-Dnsdist is used as facade for Unbound: to give DoH/DoH3/DoT/DoQ
+* Dnsdist is used as facade for Unbound: to give DoH/DoH3/DoT/DoQ
 
 * Follow instructions for installing Dnsdist from their official site.
 
