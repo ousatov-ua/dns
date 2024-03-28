@@ -37,7 +37,7 @@
 
 #### 🔸 Limits and Sysctl
 
-Next steps are for optimizing/securing current environment. 
+* Next steps are for optimizing/securing current environment. 
 
 * Put content of `/etc/security/limits.conf` into your `limits.conf`
 
@@ -51,7 +51,7 @@ Next steps are for optimizing/securing current environment.
   ```sh
   GRUB_CMDLINE_LINUX="nosmt"
   ```
-  Apply it:
+* Apply it:
   
   ```sh
   sudo update-grub
@@ -98,7 +98,7 @@ Next steps are for optimizing/securing current environment.
   ```shell
   sudo ufw allow from <ip> proto tcp to any port 53/udp
   ```
-  Apply rules:
+* Apply rules:
 
   ```sh
   sudo ufw reload
@@ -109,7 +109,7 @@ Next steps are for optimizing/securing current environment.
 <details>
 <summary>📜 expand ...</summary>
 
-There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
+* There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
 #### 🔸 Build locally
 
@@ -162,7 +162,8 @@ sudo chown unbound:unbound /var/log/unbound
 ```
 
 #### 🔸 Unbound config
-Replace default configuration of Unbound with files from `/etc/unbound`.
+
+* Replace default configuration of Unbound with files from `/etc/unbound`.
 
 * Setup unbound-control:
 
@@ -198,9 +199,8 @@ sudo sh /opt/unbound/update-conf.sh
 sudo systemctl daemon-reload
 sudo systemctl enable --now unbound-update-config.timer`
 ```
-* Create service
 
-Put `/etc/systemd/system/unbound.service` from repo.
+* Put `/etc/systemd/system/unbound.service` from repo.
 
 #### 🔸 Redis
 
