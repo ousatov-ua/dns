@@ -11,6 +11,7 @@
 </div>
 
 🔸 Current HOWTO is for Debian based distributions, tested on Debian 12.
+
 🔸 Should work on other distributions with minimal changes
 
 🔸 I'm working on a script to automate next steps.
