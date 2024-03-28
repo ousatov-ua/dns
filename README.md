@@ -1,4 +1,4 @@
-# Configuration of filtering caching DNS resolver
+# ⚡Configuration of filtering caching DNS resolver
 
 <div align="center">
 
@@ -14,13 +14,10 @@
 
 🔸 I'm working on a script to automate next steps.
 
-## General configuration
+
+## 🧰 General configuration
 <details>
-<summary>Expand</summary>
-
-* Put content of `/etc/security/limits.conf` into your `limits.conf`
-
-* Put content of `etc/sysctl.conf` into your `sysctl.conf`
+<summary>📜 Expand</summary>
 
 #### > IPv6
 
@@ -29,14 +26,21 @@
   ```sh
   GRUB_CMDLINE_LINUX="ipv6.disable=1"
   ```
-
 * Run:
-  
+
   ```sh
   sudo update-grub
   ```
-
 * Reboot
+
+#### > Limits and Sysctl
+
+🔸Next steps are for optimizing/securing current environment. 
+
+* Put content of `/etc/security/limits.conf` into your `limits.conf`
+
+* Put content of `etc/sysctl.conf` into your `sysctl.conf`
+
 
 #### > Hyper-threading
 
@@ -99,14 +103,15 @@
   ```
 </details>
 
-## Unbound
+## 🧰 Unbound
 <details>
-<summary>Expand</summary>
+<summary>📜 Expand</summary>
 
 There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
 #### > Build locally
-<details><summary>Expand</summary>
+<details>
+<summary>📜 Expand</summary>
 
 ```shell
 
@@ -123,7 +128,7 @@ sudo make install
 
 #### > Using apt
 <details>
-<summary>Expand</summary>
+<summary>📜 Expand</summary>
 
 ```shell
 sudo apt install unbound
@@ -212,9 +217,9 @@ sudo systemctl enable --now unbound.service
 ```
 </details>
 
-## Dnsdist
+## 🧰 Dnsdist
 <details>
-<summary>Expand</summary>
+<summary>📜 Expand</summary>
 
 Dnsdist is used as facade for Unbound: to give DoH/DoH3/DoT/DoQ
 
@@ -249,9 +254,9 @@ sudo systemtl enable --now dnsdist.service
 
 </details>
 
-## Monitoring
+## 🧰 Monitoring
 <details>
-<summary>Expand</summary>
+<summary>📜 Expand</summary>
 
 > [!IMPORTANT]
 > Many thanks to [AA ar51an](https://github.com/ar51an). Please give a start for this awesome work!
@@ -263,3 +268,5 @@ sudo systemtl enable --now dnsdist.service
 [unbound-exporter](https://github.com/ar51an/unbound-exporter) or forked one [unbound-exporter-forked](https://github.com/ousatov-ua/unbound-exporter)
 
 </details>
+
+***Thanks for your support!***
