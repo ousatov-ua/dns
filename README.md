@@ -113,10 +113,10 @@
 
 * There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
-#### 🔸 Get Unbound
+#### 🔸 Install Unbound
 
 <details>
-<summary>📜 Steps to build locally ...</summary>
+<summary>   📜 Steps to build locally ...</summary>
 
 ```shell
 wget https://github.com/NLnetLabs/unbound/archive/refs/tags/release-1.19.3.zip
