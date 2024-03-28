@@ -95,7 +95,7 @@
   sudo ufw allow 53/udp
   ```
 
-* If to some specific IP address only:
+* For a specific IP address only:
   
   ```shell
   sudo ufw allow from <ip> proto tcp to any port 53/udp
