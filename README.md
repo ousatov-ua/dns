@@ -6,6 +6,8 @@
 &nbsp;&nbsp;[![release](https://img.shields.io/github/v/release/ousatov-ua/dns?display_name=release&logo=rstudio&color=90EE90&logoColor=8FBC8F)](https://github.com/ousatov-ua/dns/releases/latest/)
 &nbsp;&nbsp;![visitors](https://img.shields.io/endpoint?color=4883c2&label=visitors&logo=github&url=https%3A%2F%2Fhits.dwyl.com%2Fousatov-ua%2Fdns.json)
 &nbsp;&nbsp;![license](https://img.shields.io/github/license/ousatov-ua/dns?color=CED8E1)
+&nbsp;&nbsp;![GitHub last commit](https://img.shields.io/github/last-commit/ousatov-ua/dns)
+
 </div>
 
 🔸 Current HOWTO is for Debian based distributives, tested on Debian 12.
@@ -13,12 +15,13 @@
 🔸 I'm working on a script to automate next steps.
 
 ## General configuration
+<details>
+<summary>Expand</summary>
 
 * Put content of `/etc/security/limits.conf` into your `limits.conf`
 
 * Put content of `etc/sysctl.conf` into your `sysctl.conf`
 
-#
 #### > IPv6
 
 * Edit `etc/default/grub`, make sure that `ipv6.disable=1` is present, e.g.:
@@ -35,7 +38,6 @@
 
 * Reboot
 
-#
 #### > Hyper-threading
 
 * If you want HT disabled but you cannot disable it in BIOS, make sure that `nosmt` is present, e.g.:
@@ -48,7 +50,7 @@
   ```sh
   sudo update-grub
   ```
-#
+
 #### > !!!Optionally!!! Tuned package
 
 * Use `tuned` package for network latency optimizations:
@@ -58,7 +60,6 @@
   sudo tuned-adm profile network-latency
   sudo reboot
   ```
-#
 #### > UFW
 
 * Review current configuration of UFW:
@@ -96,13 +97,16 @@
   ```sh
   sudo ufw reload
   ```
+</details>
 
 ## Unbound
+<details>
+<summary>Expand</summary>
 
 There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
-#
 #### > Build locally
+<details><summary>Expand</summary>
 
 ```shell
 
@@ -115,6 +119,16 @@ sudo ./configure --prefix=/usr --includedir=\${prefix}/include --infodir=\${pref
 sudo make
 sudo make install
 ```
+</details>
+
+#### > Using apt
+<details>
+<summary>Expand</summary>
+
+```shell
+sudo apt install unbound
+```
+</details>
 
 🔸 Unbound and chroot 
 
@@ -196,8 +210,11 @@ Now you should be able to run Unbound
 sudo systemctl daemon-reload
 sudo systemctl enable --now unbound.service
 ```
+</details>
 
 ## Dnsdist
+<details>
+<summary>Expand</summary>
 
 Dnsdist is used as facade for Unbound: to give DoH/DoH3/DoT/DoQ
 
@@ -230,7 +247,11 @@ Put it to config
 sudo systemtl enable --now dnsdist.service
 ```
 
+</details>
+
 ## Monitoring
+<details>
+<summary>Expand</summary>
 
 > [!IMPORTANT]
 > Many thanks to [AA ar51an](https://github.com/ar51an). Please give a start for this awesome work!
@@ -240,3 +261,5 @@ sudo systemtl enable --now dnsdist.service
 [unbound-dashboard](https://github.com/ar51an/unbound-dashboard) or forked one [unbound-dashboard-forked](https://github.com/ousatov-ua/unbound-dashboard)
 
 [unbound-exporter](https://github.com/ar51an/unbound-exporter) or forked one [unbound-exporter-forked](https://github.com/ousatov-ua/unbound-exporter)
+
+</details>
