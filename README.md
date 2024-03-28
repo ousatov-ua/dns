@@ -114,11 +114,11 @@ sudo make
 sudo make install
 ```
 
-🔸Unbound and chroot 
+🔸 Unbound and chroot 
 
 Unbound usually is running under chroot.
 
-🔸Next steps usually are needed if Unbound is running under chroot, otherwise it will fail to create `*.sock` and `*.log` files.
+🔸 Next steps usually are needed if Unbound is running under chroot, otherwise it will fail to create `*.sock` and `*.log` files.
 
 ```shell
 sudo vim /etc/apparmor.d/local/usr.sbin.unbound
@@ -233,7 +233,7 @@ sudo systemtl enable --now dnsdist.service
 > [!IMPORTANT]
 > Many thanks to [AA ar51an](https://github.com/ar51an) for his work
 
-🔸Follow next HOWTO
+🔸 Follow next HOWTO
 
 [unbound-dashboard](https://github.com/ar51an/unbound-dashboard) or forked one [unbound-dashboard-forked](https://github.com/ousatov-ua/unbound-dashboard)
 
