@@ -23,7 +23,7 @@
 <details>
 <summary><i>expand</i> 👉</summary>
 
-#### 🔸 !!!Optionally!!! IPv6 (just for FAQ)
+#### 🔸 !!!Optional!!! IPv6 (just for FAQ)
 
 * Edit `/etc/default/grub`, make sure that `ipv6.disable=1` is present, e.g.:
 
@@ -46,7 +46,7 @@
 * Put content of `etc/sysctl.conf` into your `sysctl.conf`
 
 
-#### 🔸 Hyper-threading
+#### 🔸 !!!Optional!!! Hyper-threading
 
 * If you want HT disabled but you cannot disable it in BIOS, make sure that `nosmt` is present in `/etc/default/grub`, e.g.:
   
@@ -59,7 +59,7 @@
   sudo update-grub
   ```
 
-#### 🔸 !!!Optionally!!! Tuned package
+#### 🔸 !!!Optional!!! Tuned package
 
 * Use `tuned` package for network latency optimizations:
   
