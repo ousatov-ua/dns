@@ -233,6 +233,8 @@ sudo systemtl enable --now dnsdist.service
 > [!IMPORTANT]
 > Many thanks to [AA ar51an](https://github.com/ar51an) for his work
 
-Please use [unbound-dashboard](https://github.com/ar51an/unbound-dashboard) or forked one [unbound-dashboard-forked](https://github.com/ousatov-ua/unbound-dashboard)
+🔸Follow next HOWTO
 
-and [unbound-exporter](https://github.com/ar51an/unbound-exporter) or forked one [unbound-exporter-forked](https://github.com/ousatov-ua/unbound-exporter)
+[unbound-dashboard](https://github.com/ar51an/unbound-dashboard) or forked one [unbound-dashboard-forked](https://github.com/ousatov-ua/unbound-dashboard)
+
+[unbound-exporter](https://github.com/ar51an/unbound-exporter) or forked one [unbound-exporter-forked](https://github.com/ousatov-ua/unbound-exporter)
