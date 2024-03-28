@@ -118,12 +118,18 @@
 * Build locally
 
 ```shell
-
 wget https://github.com/NLnetLabs/unbound/archive/refs/tags/release-1.19.3.zip
 unzip release-1.19.3.zip
 cd release-1.19.3
 sudo apt install bison flex libevent-dev libexpat1-dev libhiredis-dev libnghttp2-dev libprotobuf-c-dev libssl-dev libsystemd-dev protobuf-c-compiler python3-dev swig
+```
+* Remove debugging information
+```shell
 export CFLAGS="-O2"
+```
+* Configure, compile and install
+
+```shell
 sudo ./configure --prefix=/usr --includedir=\${prefix}/include --infodir=\${prefix}/share/info --mandir=\${prefix}/share/man --localstatedir=/var --runstatedir=/run --sysconfdir=/etc --with-chroot-dir= --with-dnstap-socket-path=/run/dnstap.sock --with-libevent --with-libhiredis --with-libnghttp2 --with-pidfile=/run/unbound.pid --with-pythonmodule --with-pyunbound --with-rootkey-file=/var/lib/unbound/root.key --disable-dependency-tracking --disable-flto --disable-maintainer-mode --disable-option-checking --disable-rpath --disable-silent-rules --enable-cachedb --enable-dnstap --enable-subnet --enable-systemd --enable-tfo-client --enable-tfo-server
 sudo make
 sudo make install
