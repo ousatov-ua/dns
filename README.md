@@ -116,7 +116,7 @@
 #### 🔸 Install Unbound
 
 <details>
-<summary>   📜 Steps to build locally ...</summary>
+<summary> 📜 Steps to build locally ... </summary>
 
 ```shell
 wget https://github.com/NLnetLabs/unbound/archive/refs/tags/release-1.19.3.zip
@@ -137,11 +137,13 @@ sudo make install
 ```
 </details>
 
-* Using apt
+<details>
+<summary> 📜 Using apt ... </summary>
 
 ```shell
 sudo apt install unbound
 ```
+</details>
 
 #### 🔸 Unbound and chroot 
 
