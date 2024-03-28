@@ -17,7 +17,7 @@
 🔸 I'm working on a script to automate next steps.
 
 > [!IMPORTANT]
-> 🎉 Many thanks to: [AA ar51an](https://github.com/ar51an), [Gerd hagezy](https://github.com/hagezi). Please give a start for their awesome work! 🎉
+> 🎉 Many thanks to: [AA ar51an](https://github.com/ar51an), [Gerd hagezy](https://github.com/hagezi). Please give a star for their awesome work! 🎉
 
 ## 🧰 General configuration
 <details>
