@@ -140,7 +140,7 @@ sudo apt install unbound
 
 * Unbound usually is running under chroot.
 
-##### 🔸 Next steps usually are needed if Unbound is running under chroot, otherwise it will fail to create `*.sock` and `*.log` files.
+* Next steps usually are needed if Unbound is running under chroot, otherwise it will fail to create `*.sock` and `*.log` files.
 
 ```shell
 sudo vim /etc/apparmor.d/local/usr.sbin.unbound
