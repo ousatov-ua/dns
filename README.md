@@ -21,7 +21,7 @@
 
 ## 🧰 General configuration
 <details>
-<summary>... 👉</summary>
+<summary><i>expand</i> 👉</summary>
 
 #### 🔸 IPv6
 
@@ -109,7 +109,7 @@
 
 ## 🧰 Unbound
 <details>
-<summary>... 👉</summary>
+<summary><i>expand</i> 👉</summary>
 
 * There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
@@ -241,7 +241,7 @@ sudo systemctl enable --now unbound.service
 
 ## 🧰 Dnsdist
 <details>
-<summary>... 👉</summary>
+<summary><i>expand</i> 👉</summary>
 
 * Dnsdist is used as facade for Unbound: to give DoH/DoH3/DoT/DoQ
 
@@ -278,7 +278,7 @@ sudo systemtl enable --now dnsdist.service
 
 ## 🧰 Monitoring
 <details>
-<summary>... 👉</summary>
+<summary><i>expand</i> 👉</summary>
 
 
 🔸 Follow next HOWTO
