@@ -178,6 +178,8 @@ sudo chown unbound:unbound /var/log/unbound
 
 * Replace default configuration of Unbound with files from `/etc/unbound`.
 
+* Make appropriate changes for number of threads etc, default is 2 threads.
+
 * Setup unbound-control:
 
 ```shell
