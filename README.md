@@ -113,7 +113,9 @@
 
 * There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
 
-#### 🔸 Build locally
+#### 🔸 Get Ubuntu
+
+* Build locally
 
 ```shell
 
@@ -128,7 +130,7 @@ sudo make install
 ```
 
 
-#### 🔸 Using apt
+* Using apt
 
 ```shell
 sudo apt install unbound
