@@ -46,7 +46,7 @@ Next steps are for optimizing/securing current environment.
 
 #### 🔸 Hyper-threading
 
-* If you want HT disabled but you cannot disable it in BIOS, make sure that `nosmt` is present, e.g.:
+* If you want HT disabled but you cannot disable it in BIOS, make sure that `nosmt` is present in `/etc/default/grub`, e.g.:
   
   ```sh
   GRUB_CMDLINE_LINUX="nosmt"
