@@ -115,9 +115,8 @@
 
 #### 🔸 Get Unbound
 
-* Build locally
 <details>
-<summary>📜 expand ...</summary>
+<summary>📜 Steps to build locally</summary>
 
 ```shell
 wget https://github.com/NLnetLabs/unbound/archive/refs/tags/release-1.19.3.zip
