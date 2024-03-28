@@ -1,7 +1,6 @@
-
+# ⚡Filtering Caching DNS Resolver⚡
 
 <div align="center">
-# ⚡Filtering Caching DNS Resolver⚡
 
 ![dns](https://img.shields.io/badge/-dns-D8BFD8?logo=unrealengine&logoColor=3a3a3d)
 &nbsp;&nbsp;[![release](https://img.shields.io/github/v/release/ousatov-ua/dns?display_name=release&logo=rstudio&color=90EE90&logoColor=8FBC8F)](https://github.com/ousatov-ua/dns/releases/latest/)
