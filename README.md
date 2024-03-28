@@ -14,6 +14,8 @@
 
 🔸 I'm working on a script to automate next steps.
 
+> [!IMPORTANT]
+> 🎉 Many thanks to: [AA ar51an](https://github.com/ar51an), [Gerd hagezy](https://github.com/hagezi). Please give a start for their awesome work! 🎉
 
 ## 🧰 General configuration
 <details>
@@ -258,8 +260,6 @@ sudo systemtl enable --now dnsdist.service
 <details>
 <summary>📜 Expand</summary>
 
-> [!IMPORTANT]
-> Many thanks to [AA ar51an](https://github.com/ar51an). Please give a start for this awesome work!
 
 🔸 Follow next HOWTO
 
@@ -268,5 +268,7 @@ sudo systemtl enable --now dnsdist.service
 [unbound-exporter](https://github.com/ar51an/unbound-exporter) or forked one [unbound-exporter-forked](https://github.com/ousatov-ua/unbound-exporter)
 
 </details>
+
+
 
 ***Thanks for your support!***
