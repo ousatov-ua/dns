@@ -1,6 +1,14 @@
 # Configuration of filtering caching DNS resolver
 
-Current HOWTO is for Debian based distributives, tested on Debian 12.
+<div align="center">
+
+![dns](https://img.shields.io/badge/-dns-D8BFD8?logo=unrealengine&logoColor=3a3a3d)
+&nbsp;&nbsp;[![release](https://img.shields.io/github/v/release/ousatov-ua/dns?display_name=release&logo=rstudio&color=90EE90&logoColor=8FBC8F)](https://github.com/ousatov-ua/dns/releases/latest/)
+&nbsp;&nbsp;![visitors](https://img.shields.io/endpoint?color=4883c2&label=visitors&logo=github&url=https%3A%2F%2Fhits.dwyl.com%2Fousatov-ua%2Fdns.json)
+&nbsp;&nbsp;![license](https://img.shields.io/github/license/ousatov-ua/dns?color=CED8E1)
+</div>
+
+🔸 Current HOWTO is for Debian based distributives, tested on Debian 12.
 
 ## General configuration
 
@@ -9,7 +17,7 @@ Current HOWTO is for Debian based distributives, tested on Debian 12.
 * Put content of `etc/sysctl.conf` into your `sysctl.conf`
 
 #
-#### > Turn off IPv6
+#### > IPv6
 
 * Edit `etc/default/grub`, make sure that `ipv6.disable=1` is present, e.g.:
 
@@ -106,11 +114,11 @@ sudo make
 sudo make install
 ```
 
-* Unbound and chroot 
+🔸Unbound and chroot 
 
-Unbound is running under chroot.
+Unbound usually is running under chroot.
 
-Next steps should be done for sure if Unbound is running under chroot, otherwise it will fail to create *.sock and log files.
+🔸Next steps usually are needed if Unbound is running under chroot, otherwise it will fail to create `*.sock` and `*.log` files.
 
 ```shell
 sudo vim /etc/apparmor.d/local/usr.sbin.unbound
