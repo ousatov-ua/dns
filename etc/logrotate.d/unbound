@@ -1,0 +1,10 @@
+/var/log/unbound/unbound.log {
+    daily
+    rotate 7
+    compress
+    delaycompress
+    notifempty
+    postrotate
+        unbound-control log_reopen
+    endscript
+}
