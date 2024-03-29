@@ -173,6 +173,7 @@ sudo apparmor_parser -r /etc/apparmor.d/usr.sbin.unbound
 sudo mkdir /var/log/unbound
 sudo chown unbound:unbound /var/log/unbound
 ```
+* Put file `/etc/logrotate.d/unbound` to `/etc/logrotate.d/`
 
 #### 🔸 Unbound config
 
