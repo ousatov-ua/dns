@@ -137,7 +137,6 @@ sudo ./configure --prefix=/usr --includedir=\${prefix}/include --infodir=\${pref
 sudo make
 sudo make install
 ```
-</details>
 
 #### 🔸 Unbound and chroot 
 
