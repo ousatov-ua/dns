@@ -124,10 +124,15 @@ unzip release-1.19.3.zip
 cd release-1.19.3
 sudo apt install bison flex libevent-dev libexpat1-dev libhiredis-dev libnghttp2-dev libprotobuf-c-dev libssl-dev libsystemd-dev protobuf-c-compiler python3-dev swig
 ```
-* Remove debugging information
+* Compilation flags (I used next but you are free to specify any you want)
 ```shell
-export CFLAGS="-O2"
+export CFLAGS="-Ofast -ffloat-store -ffast-math -fno-rounding-math -fno-signaling-nans -fcx-limited-range -fno-math-errno -funsafe-math-optimizations -fassociative-math -freciprocal-math -ffinite-math-only -fno-signed-zeros -fno-trapping-math -frounding-math -fsingle-precision-constant -fcx-fortran-rules -flto"
 ```
+
+> [!IMPORTANT]
+> Maybe I'm doing something wrong with CFLAGS, but Makefile produced does not contain passed options via `export`.
+> I did next to give options: edited `Makefile` generated and put gcc flags to `CFLAGS=...` defined there.
+
 * Configure, compile and install
 
 ```shell
