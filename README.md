@@ -157,7 +157,6 @@ sudo ./configure --prefix=/usr --includedir=\${prefix}/include --infodir=\${pref
 
 > [!IMPORTANT]
 > Maybe I'm doing something wrong with CFLAGS, but Makefile produced does not contain passed options via `export`.
-
 > I did next to give options: edited `Makefile` generated and put gcc flags to `CFLAGS=...` defined there.
 
 * Make and install
