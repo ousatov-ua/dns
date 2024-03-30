@@ -12,9 +12,14 @@
 
 🔸 Current HOWTO is for Debian based distributions, tested on Debian 12.
 
+> [!TIP]
+> For Home network I would say that minimal requirements are 1 CPU core + 2 Gb RAM.
+> Having 2 CPU cores and 4Gb RAM will is more than compfortable.
+
 🔸 Should work on other distributions with minimal changes
 
 🔸 I'm working on a script to automate next steps.
+
 
 > [!IMPORTANT]
 > 🎉 Many thanks to: [AA ar51an](https://github.com/ar51an), [Gerd hagezy](https://github.com/hagezi). Please give a star for their awesome work! 🎉
