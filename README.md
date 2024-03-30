@@ -10,26 +10,28 @@
 
 </div>
 
-> [!IMPORTANT]
-> 🎉 Many thanks to: [AA ar51an](https://github.com/ar51an), [Gerd hagezy](https://github.com/hagezi). Please give a star for their awesome work! 🎉
 
 🔸 Current HOWTO defines steps to setup caching DNS resolver with configuration for family usage.
 
-It gives possibility to have secured DNS endpoints Plain/DoH/DoH3/DoQ/DoT.
+* It gives possibility to have secured DNS endpoints Plain/DoH/DoH3/DoQ/DoT.
 
-Facade for DNS interfaces is [Dnsdist](https://dnsdist.org/).
+* Facade for DNS interfaces is [Dnsdist](https://dnsdist.org/).
 
-DNS resolver is [Unbound](https://nlnetlabs.nl/projects/unbound/about/)
+* DNS resolver is [Unbound](https://nlnetlabs.nl/projects/unbound/about/). It works as **resolver**, without forwarding to any upstream DNS servers. 
 
-Second level cache is [Redis](https://redis.io/)
+* Second level cache is [Redis](https://redis.io/)
 
-Everything is prepared to setup monitoring tools such as `Loki`, `Prometheus`, `Promtail` and `Grafana`
+* Everything is prepared to setup monitoring tools such as `Loki`, `Prometheus`, `Promtail` and `Grafana`
 
 🔸 Current HOWTO is for Debian based distributions, tested on Debian 12.
 
 🔸 Should work on other distributions with minimal changes
 
 🔸 I'm working on a script to automate next steps.
+
+> [!IMPORTANT]
+> 🎉 Many thanks to: [AA ar51an](https://github.com/ar51an), [Gerd hagezy](https://github.com/hagezi). Please give a star for their awesome work! 🎉
+
 
 > [!TIP]
 > For Home network I would say that minimal requirements are 1 CPU core and 2 Gb RAM.
