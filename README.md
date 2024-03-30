@@ -23,7 +23,7 @@
 
 * Everything is prepared to setup monitoring tools such as `Loki`, `Prometheus`, `Promtail` and `Grafana`
 
-🔸 Current HOWTO is for Debian based distributions, tested on Debian 12.
+🔸 Tested on Debian 12.
 
 🔸 Should work on other distributions with minimal changes
 
