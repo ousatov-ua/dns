@@ -111,8 +111,6 @@
 <details>
 <summary><i>expand</i> 👉</summary>
 
-* There are two ways: to use package for your distributive (e.g. `apt` for Debian) or build it locally.
-
 #### 🔸 Install Unbound
 
 * We need to compile it locally because default `Unbound` from `apt` does not include `cachedb` module.
