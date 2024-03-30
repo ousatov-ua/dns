@@ -13,6 +13,18 @@
 > [!IMPORTANT]
 > 🎉 Many thanks to: [AA ar51an](https://github.com/ar51an), [Gerd hagezy](https://github.com/hagezi). Please give a star for their awesome work! 🎉
 
+🔸 Current HOWTO defines steps to setup caching DNS resolver with configuration for family usage.
+
+It gives possibility to have secured DNS endpoints Plain/DoH/DoH3/DoQ/DoT.
+
+Facade for DNS interfaces is [Dnsdist](https://dnsdist.org/).
+
+DNS resolver is [Unbound](https://nlnetlabs.nl/projects/unbound/about/)
+
+Second level cache is [Redis](https://redis.io/)
+
+Everything is prepared to setup monitoring tools such as `Loki`, `Prometheus`, `Promtail` and `Grafana`
+
 🔸 Current HOWTO is for Debian based distributions, tested on Debian 12.
 
 🔸 Should work on other distributions with minimal changes
@@ -121,6 +133,7 @@
 #### 🔸 Install Unbound
 
 * We need to compile it locally because default `Unbound` from `apt` does not include `cachedb` module.
+* Even if you will not use `Redis` as Level 2 cache for `Unbound` I would anyway suggest to compile `Unbound` locally to have the latest version. 
 
 ```shell
 wget https://github.com/NLnetLabs/unbound/archive/refs/tags/release-1.19.3.zip
