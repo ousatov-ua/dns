@@ -17,7 +17,7 @@
 
 * Facade for DNS interfaces is [Dnsdist](https://dnsdist.org/).
 
-* DNS resolver is [Unbound](https://nlnetlabs.nl/projects/unbound/about/). It works as **resolver**, without forwarding to any upstream DNS servers. 
+* DNS resolver is [Unbound](https://nlnetlabs.nl/projects/unbound/about/). It works as **resolver**, without forwarding queries to any upstream DNS servers. 
 
 * Second level cache is [Redis](https://redis.io/)
 
