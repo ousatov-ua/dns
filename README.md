@@ -10,8 +10,9 @@
 
 </div>
 
+🔸 Intro
 
-🔸 Current HOWTO defines steps to setup caching DNS resolver with configuration for family usage.
+* Current HOWTO defines steps to setup caching DNS resolver with configuration for family usage.
 
 * It gives possibility to have next DNS endpoints: Plain/DoH/DoH3/DoQ/DoT.
 
