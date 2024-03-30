@@ -13,7 +13,7 @@
 🔸 Current HOWTO is for Debian based distributions, tested on Debian 12.
 
 > [!TIP]
-> For Home network I would say that minimal requirements are 1 CPU core + 2 Gb RAM.
+> For Home network I would say that minimal requirements are 1 CPU core and 2 Gb RAM.
 > 
 > Having 2 CPU cores and 4Gb RAM is more than compfortable.
 
