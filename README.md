@@ -13,7 +13,7 @@
 
 🔸 Current HOWTO defines steps to setup caching DNS resolver with configuration for family usage.
 
-* It gives possibility to have secured DNS endpoints Plain/DoH/DoH3/DoQ/DoT.
+* It gives possibility to have next DNS endpoints: Plain/DoH/DoH3/DoQ/DoT.
 
 * Facade for DNS interfaces is [Dnsdist](https://dnsdist.org/).
 
