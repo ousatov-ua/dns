@@ -275,7 +275,7 @@ sudo systemctl enable --now unbound.service
 * Put `/etc/dnsdist/dnsdist.conf` from repo.
 * `dnsdist.conf` contains DoH configuration where you can restrict access to it using custom url. Just replace `<some secret client id>` in that configurations with some unique combination.
 You can specify as many such urls as you want, separating users. For Dot/DoQ there is no such configuration, but it is possible to configure if you are using wildcard certificate. 
-* Put crt and pem to `/opt/lego` (edit `dnsdist.conf` to point to right direction and certificate/key filenames)
+* !!!Optional!!! If you will use DoH/DoH3/DoT/DoQ put crt and pem to `/opt/lego` (edit `dnsdist.conf` to point to right directory, also certificate/key filenames)
 * Generate key to access dnsdist's console:
 
 ```shell
