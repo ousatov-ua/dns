@@ -16,6 +16,8 @@
 > For Home network I would say that minimal requirements are 1 CPU core and 2 Gb RAM.
 > 
 > Having 2 CPU cores and 4Gb RAM is more than compfortable.
+>
+> Regarding hyper-threading: In my testings I found out that disabling HT gives better performance results. Your observations can vary.
 
 🔸 Should work on other distributions with minimal changes
 
