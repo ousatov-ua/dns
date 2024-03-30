@@ -10,7 +10,14 @@
 
 </div>
 
+> [!IMPORTANT]
+> 🎉 Many thanks to: [AA ar51an](https://github.com/ar51an), [Gerd hagezy](https://github.com/hagezi). Please give a star for their awesome work! 🎉
+
 🔸 Current HOWTO is for Debian based distributions, tested on Debian 12.
+
+🔸 Should work on other distributions with minimal changes
+
+🔸 I'm working on a script to automate next steps.
 
 > [!TIP]
 > For Home network I would say that minimal requirements are 1 CPU core and 2 Gb RAM.
@@ -18,14 +25,6 @@
 > Having 2 CPU cores and 4Gb RAM is more than compfortable.
 >
 > Regarding hyper-threading: In my testings I found out that disabling HT gives better performance results. Your observations can vary.
-
-🔸 Should work on other distributions with minimal changes
-
-🔸 I'm working on a script to automate next steps.
-
-
-> [!IMPORTANT]
-> 🎉 Many thanks to: [AA ar51an](https://github.com/ar51an), [Gerd hagezy](https://github.com/hagezi). Please give a star for their awesome work! 🎉
 
 ## 🧰 General configuration
 <details>
