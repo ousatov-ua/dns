@@ -14,6 +14,7 @@
 
 > [!TIP]
 > For Home network I would say that minimal requirements are 1 CPU core + 2 Gb RAM.
+> 
 > Having 2 CPU cores and 4Gb RAM will is more than compfortable.
 
 🔸 Should work on other distributions with minimal changes
