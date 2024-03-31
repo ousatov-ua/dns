@@ -146,7 +146,7 @@ sudo apt install bison flex libevent-dev libexpat1-dev libhiredis-dev libnghttp2
 ```
 * Compilation flags (I used next but you are free to specify any you want)
 ```shell
-export CFLAGS="-Ofast -flto"
+export CFLAGS="-Ofast -pipe -march=native -flto"
 ```
 
 * Configure
