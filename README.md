@@ -146,7 +146,7 @@ sudo apt install bison flex libevent-dev libexpat1-dev libhiredis-dev libnghttp2
 ```
 * Compilation flags (I used next but you are free to specify any you want)
 ```shell
-export CFLAGS="-Ofast -ffloat-store -ffast-math -fno-rounding-math -fno-signaling-nans -fcx-limited-range -fno-math-errno -funsafe-math-optimizations -fassociative-math -freciprocal-math -ffinite-math-only -fno-signed-zeros -fno-trapping-math -frounding-math -fsingle-precision-constant -fcx-fortran-rules -flto"
+export CFLAGS="-Ofast -flto"
 ```
 
 * Configure
