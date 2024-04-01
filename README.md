@@ -270,12 +270,58 @@ sudo systemctl enable --now unbound.service
 
 * Dnsdist is used as facade for Unbound: to give DoH/DoH3/DoT/DoQ
 
+<details>
+<summary><i>Installing using `apt`</i> 👉</summary>
 * Follow instructions for installing Dnsdist from their official site.
-
 * Put `/etc/dnsdist/dnsdist.conf` from repo.
 * `dnsdist.conf` contains DoH configuration where you can restrict access to it using custom url. Just replace `<some secret client id>` in that configurations with some unique combination.
 You can specify as many such urls as you want, separating users. For Dot/DoQ there is no such configuration, but it is possible to configure if you are using wildcard certificate. 
 * !!!Optional!!! If you will use DoH/DoH3/DoT/DoQ put crt and pem to `/opt/lego` (edit `dnsdist.conf` to point to right directory, also certificate/key filenames)
+</details>
+
+<details>
+<summary><i>Compiling locally</i> 👉</summary>
+
+```shell
+sudo apt install autoconf automake libedit-dev libsodium-dev libtool-bin \
+pkg-config protobuf-compiler libnghttp2-dev libh2o-evloop-dev libluajit-5.1-dev \
+libboost-all-dev libsystemd-dev libbpf-dev libclang-dev git cmake
+```
+* Install rust using script `/opt/install-rust.sh` from repo.
+* Install `quiche` if you need DoH3/DoQ using `/opt/install-quiche.sh` from repo. Additionally I create symlink to `quiche` lib for accessibility:
+
+```shell
+sudo ln /usr/local/lib/libdnsdist-quiche.so /usr/lib/libdnsdist-quiche.so
+```
+
+* Export CFLAGS and CXXFLAGS if you want, I'm using next:
+
+```shell
+export CFLAGS="-Ofast -pipe -march=native -flto"
+export CXXFLAGS="-Ofast -pipe -march=native -flto"
+```
+* Configure, make and install:
+
+```shell
+./configure --enable-dns-over-tls --enable-dns-over-https --enable-dns-over-http3 --enable-dns-over-quic --with-systemd --with-quiche
+make
+sudo make install
+```
+* Copy generated `dnsdist.service` to `/etc/systemd/system` directory
+* Copy `etc/dnsdist/dnsdist.conf` to `/usr/local/etc`. Please pay attention that there are DoH/DoH3/DoQ/DoT are configured, 
+so you need to modify config to point to right certificate and private key or disable those interfaces.
+* Create user `dnsdist:dnsdist` and give rights to config:
+
+```shell
+sudo chown root:dnsdist /usr/local/etc/dnsdist.conf
+```
+* Reload services and start dnsdist
+
+```shell
+sudo systemctl daemon-reload
+```
+</details>
+
 * Generate key to access dnsdist's console:
 
 ```shell
