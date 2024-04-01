@@ -146,9 +146,9 @@ sudo apt install bison flex libevent-dev libexpat1-dev libhiredis-dev libnghttp2
 ```
 * Compilation flags (I used next but you are free to specify any you want)
 ```shell
-export CFLAGS="-Ofast -pipe -march=native -flto"
-export CXXFLAGS="-Ofast -pipe -march=native -flto"
-export CPPFLAGS="-Ofast -pipe -march=native -flto"
+export CFLAGS="-Ofast -pipe -march=native"
+export CXXFLAGS="-Ofast -pipe -march=native"
+export CPPFLAGS="-Ofast -pipe -march=native"
 ```
 
 * Configure
@@ -302,9 +302,9 @@ sudo ln /usr/local/lib/libdnsdist-quiche.so /usr/lib/libdnsdist-quiche.so
 * Export CFLAGS and CXXFLAGS if you want, I'm using next:
 
 ```shell
-export CFLAGS="-Ofast -pipe -march=native -flto"
-export CXXFLAGS="-Ofast -pipe -march=native -flto"
-export CPPFLAGS="-Ofast -pipe -march=native -flto"
+export CFLAGS="-Ofast -pipe -march=native"
+export CXXFLAGS="-Ofast -pipe -march=native"
+export CPPFLAGS="-Ofast -pipe -march=native"
 ```
 * Configure, make and install:
 
