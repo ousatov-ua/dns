@@ -271,11 +271,14 @@ sudo systemctl enable --now unbound.service
 * Dnsdist is used as facade for Unbound: to give DoH/DoH3/DoT/DoQ
 
 <details>
-<summary><i>Installing using `apt`</i> 👉</summary>
+<summary><i>Installing using <b>apt</b></i> 👉</summary>
 * Follow instructions for installing Dnsdist from their official site.
+  
 * Put `/etc/dnsdist/dnsdist.conf` from repo.
+* 
 * `dnsdist.conf` contains DoH configuration where you can restrict access to it using custom url. Just replace `<some secret client id>` in that configurations with some unique combination.
-You can specify as many such urls as you want, separating users. For Dot/DoQ there is no such configuration, but it is possible to configure if you are using wildcard certificate. 
+You can specify as many such urls as you want, separating users. For Dot/DoQ there is no such configuration, but it is possible to configure if you are using wildcard certificate.
+
 * !!!Optional!!! If you will use DoH/DoH3/DoT/DoQ put crt and pem to `/opt/lego` (edit `dnsdist.conf` to point to right directory, also certificate/key filenames)
 </details>
 
