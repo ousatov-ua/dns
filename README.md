@@ -152,7 +152,7 @@ export CFLAGS="-Ofast -pipe -march=native -flto"
 * Configure
 
 ```shell
-sudo ./configure --prefix=/usr --includedir=\${prefix}/include --infodir=\${prefix}/share/info --mandir=\${prefix}/share/man --localstatedir=/var --runstatedir=/run --sysconfdir=/etc --with-chroot-dir= --with-dnstap-socket-path=/run/dnstap.sock --with-libevent --with-libhiredis --with-libnghttp2 --with-pidfile=/run/unbound.pid --with-pythonmodule --with-pyunbound --with-rootkey-file=/var/lib/unbound/root.key --disable-dependency-tracking --disable-flto --disable-maintainer-mode --disable-option-checking --disable-rpath --disable-silent-rules --enable-cachedb --enable-dnstap --enable-subnet --enable-systemd --enable-tfo-client --enable-tfo-server
+./configure --prefix=/usr --includedir=\${prefix}/include --infodir=\${prefix}/share/info --mandir=\${prefix}/share/man --localstatedir=/var --runstatedir=/run --sysconfdir=/etc --with-chroot-dir= --with-dnstap-socket-path=/run/dnstap.sock --with-libevent --with-libhiredis --with-libnghttp2 --with-pidfile=/run/unbound.pid --with-pythonmodule --with-pyunbound --with-rootkey-file=/var/lib/unbound/root.key --disable-dependency-tracking --disable-flto --disable-maintainer-mode --disable-option-checking --disable-rpath --disable-silent-rules --enable-cachedb --enable-dnstap --enable-subnet --enable-systemd --enable-tfo-client --enable-tfo-server
 ```
 
 > [!IMPORTANT]
@@ -162,8 +162,7 @@ sudo ./configure --prefix=/usr --includedir=\${prefix}/include --infodir=\${pref
 * Make and install
 
 ```shell
-
-sudo make
+make
 sudo make install
 ```
 
@@ -290,6 +289,7 @@ sudo apt install autoconf automake libedit-dev libsodium-dev libtool-bin \
 pkg-config protobuf-compiler libnghttp2-dev libh2o-evloop-dev libluajit-5.1-dev \
 libboost-all-dev libsystemd-dev libbpf-dev libclang-dev git cmake
 ```
+
 * Install rust using script `/opt/install-rust.sh` from repo.
 * Install `quiche` if you need DoH3/DoQ using `/opt/install-quiche.sh` from repo. Additionally I create symlink to `quiche` lib for accessibility:
 
@@ -306,10 +306,14 @@ export CXXFLAGS="-Ofast -pipe -march=native -flto"
 * Configure, make and install:
 
 ```shell
+wget https://downloads.powerdns.com/releases/dnsdist-1.9.1.tar.bz2
+tar xjf dnsdist-1.9.1.tar.bz2
+cd dnsdist-1.9.1
 ./configure --enable-dns-over-tls --enable-dns-over-https --enable-dns-over-http3 --enable-dns-over-quic --with-systemd --with-quiche
 make
 sudo make install
 ```
+
 * Copy generated `dnsdist.service` to `/etc/systemd/system` directory
 * Copy `etc/dnsdist/dnsdist.conf` to `/usr/local/etc`. Please pay attention that there are DoH/DoH3/DoQ/DoT are configured, 
 so you need to modify config to point to right certificate and private key or disable those interfaces.
