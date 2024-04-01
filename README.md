@@ -275,7 +275,7 @@ sudo systemctl enable --now unbound.service
 * Follow instructions for installing Dnsdist from their official site.
   
 * Put `/etc/dnsdist/dnsdist.conf` from repo.
-* 
+
 * `dnsdist.conf` contains DoH configuration where you can restrict access to it using custom url. Just replace `<some secret client id>` in that configurations with some unique combination.
 You can specify as many such urls as you want, separating users. For Dot/DoQ there is no such configuration, but it is possible to configure if you are using wildcard certificate.
 
