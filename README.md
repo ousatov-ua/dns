@@ -331,7 +331,7 @@ sudo systemctl daemon-reload
 sudo dnsdist
 >makeKey()
 ```
-Copy key to dnsdist.conf as
+* Copy key to dnsdist.conf as
 
 ```shell
 setKey("<key from console>")
@@ -342,7 +342,7 @@ setKey("<key from console>")
 >hashPassword("<your password>")
 ```
 
-Put it to config
+* Put it to config
 
 * Start dnsdist
 
