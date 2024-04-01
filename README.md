@@ -290,8 +290,8 @@ pkg-config protobuf-compiler libnghttp2-dev libh2o-evloop-dev libluajit-5.1-dev 
 libboost-all-dev libsystemd-dev libbpf-dev libclang-dev git cmake
 ```
 
-* Install rust using script `/opt/install-rust.sh` from repo.
-* Install `quiche` if you need DoH3/DoQ using `/opt/install-quiche.sh` from repo. Additionally I create symlink to `quiche` lib for accessibility:
+* Install **Rust** using script `/opt/install-rust.sh` from repo.
+* Install **Quiche** if you need DoH3/DoQ using `/opt/install-quiche.sh` from repo. Additionally I create symlink to `quiche` lib for accessibility:
 
 ```shell
 sudo ln /usr/local/lib/libdnsdist-quiche.so /usr/lib/libdnsdist-quiche.so
