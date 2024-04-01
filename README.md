@@ -120,7 +120,7 @@
 * For a specific IP address only:
   
   ```shell
-  sudo ufw allow from <ip> proto tcp to any port 53/udp
+  sudo ufw allow from <ip> proto udp to any port 53
   ```
 * Apply rules:
 
