@@ -43,7 +43,7 @@
 
 ## 🧰 General configuration
 <details>
-<summary><i>expand</i> 👉</summary>
+<summary><i>expand</i></summary>
 
 #### 🔸 !!!Optional!!! IPv6 (just for FAQ)
 
@@ -148,7 +148,7 @@ vim /etc/tmpfiles.d/some-service.conf
 
 ## 🧰 Unbound
 <details>
-<summary><i>expand</i> 👉</summary>
+<summary><i>expand</i></summary>
 
 #### 🔸 Install Unbound
 
@@ -257,18 +257,18 @@ sudo systemctl enable --now unbound-update-config.timer`
 
 ## 🧰 Redis
 <details>
-<summary><i>expand</i> 👉</summary>
+<summary><i>expand</i></summary>
 
 ##### 🔸 Compile locally
 
 <details>
-<summary><i>expand</i> 👉</summary>
+<summary><i>expand</i></summary>
 * TO BE
 </details>
 
 ##### 🔸 Install Redis by `apt`
 <details>
-<summary><i>expand</i> 👉</summary>
+<summary><i>expand</i></summary>
 
 ```shell
 sudo apt install redis-server
@@ -293,12 +293,12 @@ sudo systemctl enable --now unbound.service
 
 ## 🧰 Dnsdist
 <details>
-<summary><i>expand</i> 👉</summary>
+<summary><i>expand</i></summary>
 
 * Dnsdist is used as facade for Unbound: to give DoH/DoH3/DoT/DoQ
 
 <details>
-<summary><i>Installing using <b>apt</b></i> 👉</summary>
+<summary><i>Installing using <b>apt</b></i></summary>
 * Follow instructions for installing Dnsdist from their official site.
   
 * Put `/etc/dnsdist/dnsdist.conf` from repo.
@@ -310,7 +310,7 @@ You can specify as many such urls as you want, separating users. For Dot/DoQ the
 </details>
 
 <details>
-<summary><i>Compiling locally</i> 👉</summary>
+<summary><i>Compiling locally</i></summary>
 
 ```shell
 sudo apt install autoconf automake libedit-dev libsodium-dev libtool-bin \
@@ -387,7 +387,7 @@ sudo systemtl enable --now dnsdist.service
 
 ## 🧰 Monitoring
 <details>
-<summary><i>expand</i> 👉</summary>
+<summary><i>expand</i></summary>
 
 
 🔸 Follow next HOWTO
