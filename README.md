@@ -146,7 +146,7 @@ vim /etc/tmpfiles.d/some-service.conf
   
 </details>
 
-## 🔸 Unbound
+## 🧰 Unbound
 <details>
 <summary><i>expand</i> 👉</summary>
 
@@ -273,7 +273,7 @@ sudo systemctl enable --now redis-server
 ```
 </details>
 
-#### 🧰 Running Unbound
+#### 🔸 Running Unbound
 
 * Now you should be able to run Unbound
 
