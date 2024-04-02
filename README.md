@@ -259,8 +259,6 @@ sudo systemctl enable --now unbound-update-config.timer`
 <details>
 <summary><i>expand</i> 👉</summary>
 
-#### 🔸 Redis
-
 ##### 🔸 Compile locally
 
 <details>
