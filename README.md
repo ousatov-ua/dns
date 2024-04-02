@@ -157,10 +157,6 @@ export CPPFLAGS="-Ofast -pipe -march=native"
 ./configure --prefix=/usr --includedir=\${prefix}/include --infodir=\${prefix}/share/info --mandir=\${prefix}/share/man --localstatedir=/var --runstatedir=/run --sysconfdir=/etc --with-chroot-dir= --with-dnstap-socket-path=/run/dnstap.sock --with-libevent --with-libhiredis --with-libnghttp2 --with-pidfile=/run/unbound.pid --with-pythonmodule --with-pyunbound --with-rootkey-file=/var/lib/unbound/root.key --disable-dependency-tracking --disable-flto --disable-maintainer-mode --disable-option-checking --disable-rpath --disable-silent-rules --enable-cachedb --enable-dnstap --enable-subnet --enable-systemd --enable-tfo-client --enable-tfo-server
 ```
 
-> [!IMPORTANT]
-> Maybe I'm doing something wrong with CFLAGS, but Makefile produced does not contain passed options via `export`.
-> I did next to give options: edited `Makefile` generated and put gcc flags to `CFLAGS=...` defined there.
-
 * Make and install
 
 ```shell
