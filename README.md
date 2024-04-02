@@ -261,8 +261,57 @@ sudo systemctl enable --now unbound-update-config.timer`
 
 <details>
 <summary><i>🔸 Compile locally</i></summary>
-* TO BE
+
+```shell
+wget https://download.redis.io/redis-stable.tar.gz
+tar -xzvf redis-stable.tar.gz
+cd redis-stable
+make MALLOC=jemalloc USE_SYSTEMD=yes
+sudo make install
+```
+* Put next content into `/etc/tmpfiles.d/redis.conf`
+
+```shell
+d /var/run/redis 0755 redis redis
+``` 
 </details>
+
+* Put next content into `/etc/systemd/system/redis.service`
+
+```shell
+[Unit]
+Description=Redis In-Memory Data Store
+After=network.target
+
+[Service]
+Type=notify
+User=redis
+Group=redis
+ExecStart=/usr/local/bin/redis-server /etc/redis/redis.conf --supervised systemd
+ExecStop=/usr/local/bin/redis-cli shutdown
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+* Create user `redis` with next config
+
+```shell
+redis:x:112:116::/var/lib/redis:/usr/sbin/nologin
+```
+
+* Create folder
+
+```shell
+sudo mkdir /var/lib/redis
+sudo chown redis:redis /var/lib/redis
+```
+* Start service
+
+```shell
+sudo systemctl daemon-reload
+sudo systemctl enable --now redis.service
+```
 
 <details>
 <summary><i>🔸 Install Redis by `apt`</i></summary>
