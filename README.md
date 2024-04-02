@@ -138,7 +138,7 @@
 ```shell
 vim /etc/tmpfiles.d/some-service.conf
 ```
-Put this content:
+* Put this content:
 
 ```shell
 ﻿d /var/run/some-dir 0755 user user-group
