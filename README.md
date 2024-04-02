@@ -146,7 +146,7 @@ vim /etc/tmpfiles.d/some-service.conf
   
 </details>
 
-## 🧰 Unbound
+## 🔸 Unbound
 <details>
 <summary><i>expand</i> 👉</summary>
 
