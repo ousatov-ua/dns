@@ -253,7 +253,11 @@ sudo systemctl enable --now unbound-update-config.timer`
 ```
 
 * Put `/etc/systemd/system/unbound.service` from repo.
+</details>
 
+## 🧰 Redis
+<details>
+<summary><i>expand</i> 👉</summary>
 #### 🔸 Redis
 
 * Install Redis
@@ -267,8 +271,9 @@ sudo apt install redis-server
 ```shell
 sudo systemctl enable --now redis-server
 ```
+</details>
 
-#### 🔸 Running
+#### 🧰 Running Unbound
 
 * Now you should be able to run Unbound
 
@@ -276,7 +281,6 @@ sudo systemctl enable --now redis-server
 sudo systemctl daemon-reload
 sudo systemctl enable --now unbound.service
 ```
-</details>
 
 ## 🧰 Dnsdist
 <details>
