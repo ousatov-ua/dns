@@ -195,7 +195,7 @@ sudo vim /etc/apparmor.d/local/usr.sbin.unbound
 
 ```shell
 /var/log/unbound/unbound.log rw,
-/var/unbound/run/unbound.sock rw,
+/run/unbound.sock rw,
 ```
 
 * Apply it
