@@ -261,11 +261,21 @@ sudo systemctl enable --now unbound-update-config.timer`
 
 #### 🔸 Redis
 
-* Install Redis
+##### 🔸 Compile locally
+
+<details>
+<summary><i>expand</i> 👉</summary>
+* TO BE
+</details>
+
+##### 🔸 Install Redis by `apt`
+<details>
+<summary><i>expand</i> 👉</summary>
 
 ```shell
 sudo apt install redis-server
 ```
+</details>
 
 * Put `/etc/redis/redis.conf` from repo
 
