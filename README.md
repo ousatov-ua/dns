@@ -258,6 +258,7 @@ sudo systemctl enable --now unbound-update-config.timer`
 ## 🧰 Redis
 <details>
 <summary><i>expand</i> 👉</summary>
+
 #### 🔸 Redis
 
 * Install Redis
