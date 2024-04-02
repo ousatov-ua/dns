@@ -274,7 +274,7 @@ sudo make install
 ```shell
 d /var/run/redis 0755 redis redis
 ``` 
-</details>
+
 
 * Put next content into `/etc/systemd/system/redis.service`
 
@@ -312,6 +312,7 @@ sudo chown redis:redis /var/lib/redis
 sudo systemctl daemon-reload
 sudo systemctl enable --now redis.service
 ```
+</details>
 
 <details>
 <summary><i>🔸 Install Redis by `apt`</i></summary>
