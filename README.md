@@ -130,7 +130,20 @@
 #### 🔸 Compiler
 
 * Setup steps for `Unbound` and `Dnsdist` contain possibility to compile services locally. This means that you'll need compiler :) In next sections it is supposed using standard compiler for your distributives.
-* You can consider to use [AOCC](https://www.amd.com/en/developer/aocc.html) compiler if your processor is AMD. Many sources declare that code compiled by `AOCC` is faster on AMD. All you need is to follow instructions for `AOCC`. 
+* You can consider to use [AOCC](https://www.amd.com/en/developer/aocc.html) compiler if your processor is AMD. Many sources declare that code compiled by `AOCC` is faster on AMD. All you need is to follow instructions for `AOCC`.
+
+#### 🔸 Useful things
+* If you need to create some direcotory on startup, for instance `/var/run/some-dir`
+
+```shell
+vim /etc/tmpfiles.d/some-service.conf
+```
+Put this content:
+
+```shell
+﻿d /var/run/some-dir 0755 user user-group
+```
+  
 </details>
 
 ## 🧰 Unbound
