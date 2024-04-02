@@ -127,6 +127,10 @@
   ```sh
   sudo ufw reload
   ```
+#### 🔸 Compiler
+
+* Setup steps for `Unbound` and `Dnsdist` contain possibility to compile services locally. This means that you'll need compiler :) In next sections it is supposed using standard compiler for your distributives.
+* You can consider to use [AOCC](https://www.amd.com/en/developer/aocc.html) compiler if your processor is AMD. Many sources declare that code compiled by `AOCC` is faster on AMD. All you need is to follow instructions for `AOCC`. 
 </details>
 
 ## 🧰 Unbound
