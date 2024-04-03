@@ -242,7 +242,7 @@ sudo mkdir /etc/unbound/rules
 sudo sh /opt/unbound/update-conf.sh
 ```
 
-* You can check which filters are used in `/etc/unbound/unbound.conf.d/server.conf` and `/opt/unbound/update-conf.sh`
+* You can check which filters are used in `/etc/unbound/unbound.conf.d/rules.conf` and `/opt/unbound/update-conf.sh`
 
 #### 🔸 Unbound service
 * Put `unbound-update-config.service` and `unbound-update-config.timer` in corresponding path.
