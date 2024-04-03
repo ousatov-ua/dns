@@ -133,7 +133,7 @@
 * You can consider to use [AOCC](https://www.amd.com/en/developer/aocc.html) compiler if your processor is AMD. Many sources declare that code compiled by `AOCC` is faster on AMD. All you need is to follow instructions for `AOCC`.
 
 #### 🔸 Useful things
-* If you need to create some direcotory on startup, for instance `/var/run/some-dir`
+* If you need to create some direcotory on startup, for instance on this path `/var/run/some-dir` and setup right s for `user:user-group`
 
 ```shell
 vim /etc/tmpfiles.d/some-service.conf
