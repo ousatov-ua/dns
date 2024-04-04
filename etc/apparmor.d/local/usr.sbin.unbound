@@ -1,0 +1,2 @@
+/var/log/unbound/unbound.log rw,
+/run/unbound.sock rw,
