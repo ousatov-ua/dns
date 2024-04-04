@@ -306,12 +306,7 @@ redis:x:112:116::/var/lib/redis:/usr/sbin/nologin
 sudo mkdir /var/lib/redis
 sudo chown redis:redis /var/lib/redis
 ```
-* Start service
 
-```shell
-sudo systemctl daemon-reload
-sudo systemctl enable --now redis.service
-```
 </details>
 
 <details>
