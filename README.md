@@ -18,9 +18,11 @@
 
 * Facade for DNS interfaces is [Dnsdist](https://dnsdist.org/).
 
-* DNS resolver is [Unbound](https://nlnetlabs.nl/projects/unbound/about/). It works as **resolver**, without forwarding queries to any upstream DNS servers. 
+* Main DNS resolver is [Unbound](https://nlnetlabs.nl/projects/unbound/about/). It works as **resolver**, without forwarding queries to any upstream DNS servers.
 
-* Second level cache is [Redis](https://redis.io/)
+* Second level cache is [Redis](https://redis.io/) - for [Unbound](https://nlnetlabs.nl/projects/unbound/about/) only
+
+* There are also BIND9 and PDNS-recursor setup instructions as alternative.
 
 * Everything is prepared to setup monitoring tools such as `Loki`, `Prometheus`, `Promtail` and `Grafana`
 
