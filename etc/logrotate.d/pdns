@@ -1,0 +1,13 @@
+/var/log/pdns.log
+{
+        rotate 1
+        daily
+        missingok
+        notifempty
+        compress
+        delaycompress
+        sharedscripts
+        postrotate
+                [ -x /usr/lib/rsyslog/rsyslog-rotate ] && /usr/lib/rsyslog/rsyslog-rotate || true
+        endscript
+}
