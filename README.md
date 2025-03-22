@@ -442,7 +442,16 @@ sudo systemtl enable --now dnsdist.service
 
 </details>
 
+## Let's encrypt
 
+Just follow there instructions (using Python or snap)
+
+After that you will need to extract key and convert pem to crt for using it with `dnsdist`:
+
+```shell
+openssl pkey -in privkey.pem -out cert.key
+openssl x509 -outform PEM -in cert.pem -out cert.crt
+```
 
 ***Thanks for your support!***
 
